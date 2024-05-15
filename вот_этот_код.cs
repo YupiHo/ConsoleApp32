@@ -34,8 +34,8 @@ class PuppetTheatre : Theatre
     private string puppeteer;
 
     // Конструктор
-    public PuppetTheatre(int seats, int rows, bool orchestraPit, double length, double width, string puppeteer)
-        : base(seats, rows, orchestraPit, length, width)
+    public PuppetTheatre(int seats, int rows, bool orchestraPit, double length, double width, string puppeteer) //Ошибка: исправить возможность вывода отрицательных чисел
+        : base(seats, rows, orchestraPit, length, width) 
     {
         this.puppeteer = puppeteer;
     }
@@ -54,7 +54,7 @@ class CircusArena : Theatre
     private string circusArtist;
 
     // Конструктор
-    public CircusArena(int seats, int rows, bool orchestraPit, double length, double width, string artist)
+    public CircusArena(int seats, int rows, bool orchestraPit, double length, double width, string artist) //Ошибка: исправить возможность вывода отрицательных чисел
         : base(seats, rows, orchestraPit, length, width)
     {
         circusArtist = artist;
@@ -74,7 +74,7 @@ class CinemaTheatre : Theatre
     private string cinemaTechnician;
 
     // Конструктор
-    public CinemaTheatre(int seats, int rows, bool orchestraPit, double length, double width, string technician)
+    public CinemaTheatre(int seats, int rows, bool orchestraPit, double length, double width, string technician) //Ошибка: исправить возможность вывода отрицательных чисел
         : base(seats, rows, orchestraPit, length, width)
     {
         cinemaTechnician = technician;
@@ -92,7 +92,7 @@ class Program
 {
     static void Main()
     {
-        PuppetTheatre puppetTheatre = new PuppetTheatre(100, 10, false, 15.0, 10.0, "Иван Иванов");
+        PuppetTheatre puppetTheatre = new PuppetTheatre(100, 10, false, 15.0, 10.0, "Иван Иванов"); //Рекомендация: сделать ввод данных с помощью консоли
         Console.WriteLine(puppetTheatre.GetInfo());
 
         CircusArena circusArena = new CircusArena(500, 20, true, 30.0, 20.0, "Алексей Смирнов");
