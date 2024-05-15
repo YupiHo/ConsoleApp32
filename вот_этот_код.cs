@@ -4,7 +4,7 @@ using System;
 abstract class Theatre
 {
     // Поля
-    protected int numberOfSeats;
+    protected int numberOfSeats; 
     protected int numberOfRows;
     protected bool hasOrchestraPit;
     protected double stageLength;
@@ -92,7 +92,7 @@ class Program
 {
     static void Main()
     {
-        PuppetTheatre puppetTheatre = new PuppetTheatre(100, 10, false, 15.0, 10.0, "Иван Иванов");
+        PuppetTheatre puppetTheatre = new PuppetTheatre(100, 10, false, 15.0, 10.0, "Иван Иванов"); //Рекомендация: сделать ввод данных с помощью консоли.
         Console.WriteLine(puppetTheatre.GetInfo());
 
         CircusArena circusArena = new CircusArena(500, 20, true, 30.0, 20.0, "Алексей Смирнов");
